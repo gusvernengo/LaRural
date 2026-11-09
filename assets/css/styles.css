@@ -1531,6 +1531,7 @@ main.page-fade-out {
   color: rgba(255, 255, 255, 0.72);
 }
 
+
 /* =========================================
    RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================= */
@@ -1544,9 +1545,9 @@ section {
 
 @media (max-width: 768px) {
   :root {
-    --side-pad: clamp(12px, 4vw, 18px);
-    --reveal-distance: 24px;
-    --reveal-distance-lg: 40px;
+    --side-pad: clamp(18px, 5vw, 24px);
+    --reveal-distance: 28px;
+    --reveal-distance-lg: 45px;
   }
 
   .container {
@@ -1560,17 +1561,17 @@ section {
 
   /* Header: Logo left, only 3 lines right; Asociate inside dropdown */
   .navbar {
-    height: 60px;
+    height: 66px;
     width: 100%;
   }
 
   .brand-logo svg {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
 
   .brand-text {
-    font-size: 0.65rem;
+    font-size: 0.72rem;
   }
 
   .mobile-menu-toggle {
@@ -1584,13 +1585,13 @@ section {
 
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 66px;
     left: 0;
     right: 0;
     background-color: var(--white);
     flex-direction: column;
     gap: 0;
-    padding: 12px 20px 18px;
+    padding: 14px 22px 20px;
     border-bottom: 1px solid rgba(70, 84, 37, 0.12);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
     display: none;
@@ -1606,22 +1607,22 @@ section {
 
   .nav-links a {
     display: block;
-    padding: 10px 0;
-    font-size: 0.88rem;
+    padding: 11px 0;
+    font-size: 0.94rem;
   }
 
   .nav-item-cta-mobile {
     display: block;
-    padding-top: 10px;
+    padding-top: 12px;
   }
 
   .nav-links .btn-nav-cta-mobile {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 11px 20px;
+    padding: 12px 20px;
     color: var(--white);
-    font-size: 0.8rem;
+    font-size: 0.84rem;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -1631,28 +1632,29 @@ section {
     color: var(--white);
   }
 
-  /* Scale down global typography & spacing on mobile so it fits any phone cleanly */
+  /* Global buttons & headings with comfortable breathing room */
   .btn {
-    font-size: clamp(0.68rem, 2.7vw, 0.76rem);
-    padding: 9px 16px;
-    gap: 6px;
+    font-size: 0.84rem;
+    padding: 12px 22px;
+    gap: 8px;
   }
 
   .section-eyebrow {
-    font-size: clamp(0.58rem, 2.3vw, 0.65rem);
-    margin-bottom: 4px;
+    font-size: 0.7rem;
+    margin-bottom: 6px;
   }
 
   .section-heading {
-    font-size: clamp(1.15rem, 4.8vw, 1.35rem);
-    margin-bottom: 10px;
+    font-size: clamp(1.42rem, 5.8vw, 1.72rem);
+    margin-bottom: 14px;
+    line-height: 1.2;
   }
 
-  /* Heroes centered and scaled proportionally on all phones */
+  /* Heroes: generous vertical height and air so text isn't compressed */
   .hero-home {
     width: 100%;
-    min-height: 260px;
-    padding: 30px 0;
+    min-height: 360px;
+    padding: 48px 0;
     background-position: 62% center;
     background-size: cover;
   }
@@ -1662,8 +1664,8 @@ section {
   .hero-encuentro,
   .hero-asociate {
     width: 100%;
-    min-height: 210px;
-    padding: 28px 0;
+    min-height: 270px;
+    padding: 42px 0;
     background-size: cover;
   }
 
@@ -1675,12 +1677,12 @@ section {
 
   .hero-eyebrow,
   .hero-kicker-lime {
-    font-size: clamp(0.58rem, 2.3vw, 0.65rem);
-    margin-bottom: 6px;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
   }
 
   .hero-eyebrow::before {
-    width: 16px;
+    width: 20px;
   }
 
   .hero-title,
@@ -1688,14 +1690,15 @@ section {
   .hero-beneficios .hero-title,
   .hero-encuentro .hero-title,
   .hero-asociate .hero-title {
-    font-size: clamp(1.38rem, 5.8vw, 1.65rem);
-    margin-bottom: 10px;
+    font-size: clamp(1.72rem, 7vw, 2.15rem);
+    line-height: 1.08;
+    margin-bottom: 14px;
   }
 
   .hero-subtitle,
   .hero-lead-white {
-    font-size: clamp(0.76rem, 3.1vw, 0.88rem);
-    margin-bottom: 6px;
+    font-size: 0.94rem;
+    margin-bottom: 10px;
   }
 
   .hero-desc,
@@ -1703,23 +1706,23 @@ section {
   .hero-beneficios .hero-desc,
   .hero-encuentro .hero-desc,
   .hero-asociate .hero-desc {
-    font-size: clamp(0.7rem, 2.8vw, 0.78rem);
-    line-height: 1.45;
-    margin-bottom: 14px;
-    max-width: 92%;
+    font-size: 0.88rem;
+    line-height: 1.58;
+    margin-bottom: 22px;
+    max-width: 100%;
   }
 
   .hero-play-btn {
-    width: 34px;
-    height: 34px;
+    width: 42px;
+    height: 42px;
   }
 
   .hero-action {
-    font-size: clamp(0.72rem, 2.8vw, 0.8rem);
-    gap: 10px;
+    font-size: 0.88rem;
+    gap: 12px;
   }
 
-  /* Section paddings scaled down */
+  /* Spacious vertical separation between sections */
   .section-pillars,
   .section-voice,
   .section-history,
@@ -1733,93 +1736,84 @@ section {
   .section-asociate-form,
   .section-confirm-hero,
   .section-confirm-next {
-    padding: 28px 0;
+    padding: 44px 0;
   }
 
   .section-cta-banner,
   .section-map-banner,
   .section-event-strip {
-    padding: 12px 0 28px;
+    padding: 16px 0 44px;
   }
 
-  /* Keep 3-column sections side-by-side in 3 equal, fluid columns that never overflow any phone width */
+  /* 3-item sections: distributed as full-width, well-spaced cards so text is never squished into narrow strips */
   .pillars-grid,
   .role-cards-grid,
   .encuentro-cols,
   .confirm-next-cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(6px, 2vw, 10px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
     width: 100%;
   }
 
   .pillar-card,
   .role-card,
-  .confirm-step-card,
-  .encuentro-col {
+  .confirm-step-card {
     min-width: 0;
-    padding: clamp(10px, 2.8vw, 14px) clamp(7px, 2vw, 10px);
-    border-radius: 10px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    padding: 22px 20px;
+    border-radius: 14px;
+  }
+
+  .encuentro-cols > div {
+    padding: 20px;
+    background-color: var(--sage-light);
+    border-radius: 14px;
   }
 
   .pillar-badge {
-    width: clamp(22px, 6vw, 26px);
-    height: clamp(22px, 6vw, 26px);
-    font-size: clamp(0.64rem, 2.5vw, 0.72rem);
-    margin-bottom: 7px;
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
   }
 
   .role-number {
-    font-size: clamp(0.64rem, 2.5vw, 0.72rem);
-    margin-bottom: 4px;
+    font-size: 0.82rem;
+    margin-bottom: 6px;
   }
 
   .pillar-title,
   .role-card-title,
   .encuentro-col-title {
-    font-size: clamp(0.65rem, 2.6vw, 0.8rem);
-    line-height: 1.22;
-    margin-bottom: 5px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    margin-bottom: 6px;
   }
 
   .pillar-text,
   .role-card-text,
   .encuentro-col-text {
-    font-size: clamp(0.57rem, 2.22vw, 0.68rem);
-    line-height: 1.35;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    font-size: 0.88rem;
+    line-height: 1.55;
   }
 
-  /* Keep 2-column text/seal sections side-by-side, but give photo sections full width so photos look large */
+  /* 2-column sections (Text + Seal / Image): stacked with generous spacing so paragraphs have full width */
   .history-grid,
-  .confirm-hero-grid {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-    gap: 12px;
-    align-items: center;
-  }
-
+  .confirm-hero-grid,
   .voice-grid,
   .topics-grid,
   .agenda-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
+    gap: 26px;
   }
 
   .topics-image-frame,
   .agenda-photo-card,
   .voice-image-wrap {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 14px;
   }
 
-  .agenda-photo-card {
-    aspect-ratio: 16 / 10;
-  }
-
+  .agenda-photo-card,
   .topics-image-frame {
     aspect-ratio: 16 / 10;
   }
@@ -1828,40 +1822,47 @@ section {
   .history-text p,
   .role-intro p,
   .benefits-intro p {
-    font-size: clamp(0.7rem, 2.8vw, 0.78rem);
-    line-height: 1.5;
-    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.62;
+    margin-bottom: 14px;
   }
 
   .role-intro,
   .benefits-intro {
-    margin-bottom: 18px;
+    margin-bottom: 24px;
+  }
+
+  .history-seal {
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
   }
 
   .history-seal svg {
-    width: clamp(105px, 28vw, 135px);
-    height: clamp(105px, 28vw, 135px);
+    width: 170px;
+    height: 170px;
   }
 
   .horizontal-emblem {
-    gap: 8px;
+    gap: 14px;
+    justify-content: center;
   }
 
   .horizontal-emblem svg {
-    width: clamp(48px, 14vw, 68px);
-    height: clamp(48px, 14vw, 68px);
+    width: 74px;
+    height: 74px;
   }
 
   .horizontal-emblem-text {
-    font-size: clamp(0.75rem, 3vw, 0.95rem);
+    font-size: 1.1rem;
   }
 
-  /* ACCIONES PARA LOS PRODUCTORES: 2x2 Square Grid ("dos y dos, como en un cuadrado") */
+  /* ACCIONES PARA LOS PRODUCTORES: 2x2 Square Grid with spacious padding */
   .actions-table {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(8px, 2.5vw, 12px);
-    margin-top: 16px;
+    gap: 14px;
+    margin-top: 20px;
     border-top: none;
     width: 100%;
   }
@@ -1870,269 +1871,293 @@ section {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding: clamp(11px, 3vw, 14px) clamp(9px, 2.5vw, 12px);
-    background-color: rgba(255, 255, 255, 0.55);
-    border-radius: 10px;
+    gap: 6px;
+    padding: 18px 14px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 12px;
     border-bottom: none;
     overflow-wrap: break-word;
   }
 
   .action-num {
-    font-size: clamp(0.66rem, 2.6vw, 0.72rem);
+    font-size: 0.78rem;
   }
 
   .action-name {
-    font-size: clamp(0.74rem, 3vw, 0.84rem);
-    line-height: 1.25;
+    font-size: clamp(0.84rem, 3.5vw, 0.95rem);
+    line-height: 1.28;
   }
 
   .action-desc {
-    font-size: clamp(0.62rem, 2.45vw, 0.7rem);
-    line-height: 1.4;
+    font-size: clamp(0.74rem, 3vw, 0.82rem);
+    line-height: 1.48;
   }
 
-  /* BENEFICIOS PARA SEGUIR CRECIENDO: 2x2 Square Grid */
+  /* BENEFICIOS PARA SEGUIR CRECIENDO: 2x2 Square Grid with clear separation */
   .benefits-cards-2x2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(8px, 2.5vw, 12px);
+    gap: 14px;
     width: 100%;
   }
 
   .benefit-media-card {
     min-width: 0;
-    grid-template-columns: minmax(0, 1fr);
-    padding: clamp(10px, 2.8vw, 12px);
-    gap: 10px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 14px;
+    gap: 14px;
+    border-radius: 12px;
     overflow-wrap: break-word;
   }
 
   .benefit-media-title {
-    font-size: clamp(0.74rem, 3vw, 0.84rem);
-    margin-bottom: 4px;
+    font-size: clamp(0.86rem, 3.6vw, 0.96rem);
+    margin-bottom: 6px;
+    line-height: 1.25;
   }
 
   .benefit-media-desc {
-    font-size: clamp(0.62rem, 2.45vw, 0.68rem);
-    line-height: 1.4;
+    font-size: clamp(0.74rem, 3vw, 0.82rem);
+    line-height: 1.48;
+  }
+
+  .benefit-media-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
   }
 
   /* Temas & Agenda items comfortable reading size with large photo */
   .topics-list,
   .agenda-list {
-    gap: 12px;
+    gap: 14px;
   }
 
   .topic-item {
-    padding: 10px 14px;
+    padding: 14px 18px;
   }
 
   .topic-title,
   .agenda-item-title {
-    font-size: clamp(0.84rem, 3.4vw, 0.94rem);
-    margin-bottom: 3px;
+    font-size: 0.98rem;
+    margin-bottom: 4px;
   }
 
   .topic-desc,
   .agenda-item-desc {
-    font-size: clamp(0.72rem, 2.9vw, 0.8rem);
-    line-height: 1.45;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .agenda-item {
-    gap: 12px;
-    padding: 10px 12px;
+    gap: 14px;
+    padding: 14px 16px;
   }
 
   .agenda-icon-circle {
-    width: 42px;
-    height: 42px;
+    width: 46px;
+    height: 46px;
     flex-shrink: 0;
   }
 
   .agenda-icon-circle svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
 
-  /* Event Info Strip in 3 columns */
+  /* Event Info Strip distributed cleanly in rows so icons and text breathe */
   .event-strip-box {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    padding: 12px 10px;
-    gap: 6px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 22px 24px;
+    gap: 18px;
     width: 100%;
   }
 
   .event-strip-item {
     min-width: 0;
-    gap: 6px;
+    gap: 14px;
+    justify-content: flex-start;
   }
 
   .event-strip-icon svg {
-    width: 22px;
-    height: 22px;
+    width: 34px;
+    height: 34px;
     flex-shrink: 0;
   }
 
   .event-strip-text {
-    font-size: clamp(0.58rem, 2.3vw, 0.68rem);
-    overflow-wrap: break-word;
+    font-size: 0.9rem;
+    line-height: 1.35;
   }
 
-  /* CTA Banner & Map Banner */
+  .event-strip-text br {
+    display: none;
+  }
+
+  /* CTA Banner & Map Banner with comfortable stacking */
   .cta-banner-box {
-    padding: 18px 16px;
-    gap: 12px;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px 22px;
+    gap: 18px;
   }
 
   .cta-banner-box--compact {
-    padding: 16px;
+    padding: 24px 22px;
   }
 
   .cta-banner-title,
   .cta-banner-box--compact .cta-banner-title {
-    font-size: clamp(0.86rem, 3.5vw, 0.98rem);
-    margin-bottom: 4px;
+    font-size: 1.18rem;
+    line-height: 1.28;
+    margin-bottom: 6px;
   }
 
   .cta-banner-sub {
-    font-size: clamp(0.66rem, 2.6vw, 0.74rem);
+    font-size: 0.86rem;
+    line-height: 1.45;
   }
 
   .map-banner-card {
-    min-height: 92px;
-    padding: 16px;
+    min-height: 120px;
+    padding: 22px;
   }
 
   .map-pin-large svg {
-    width: 26px;
-    height: 32px;
+    width: 34px;
+    height: 40px;
   }
 
   .map-banner-title {
-    font-size: clamp(0.84rem, 3.4vw, 0.92rem);
+    font-size: 1.05rem;
   }
 
   .map-banner-sub {
-    font-size: clamp(0.66rem, 2.6vw, 0.72rem);
+    font-size: 0.84rem;
   }
 
-  /* Asociate Form & Confirmation on Mobile — larger and closer so it's comfortable to read and fill */
+  .affiliation-actions,
+  .confirm-actions {
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  /* Asociate Form & Confirmation on Mobile */
   .asociate-layout {
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+    gap: 24px;
   }
 
   .asociate-form-card {
-    padding: 24px 18px;
+    padding: 26px 20px;
     border-radius: 14px;
   }
 
   .asociate-form-title {
-    font-size: 1.3rem;
-    margin-bottom: 18px;
+    font-size: 1.35rem;
+    margin-bottom: 20px;
   }
 
   .form-grid-2col {
     grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
+    gap: 16px;
   }
 
   .form-label {
-    font-size: 0.84rem;
+    font-size: 0.86rem;
   }
 
   .form-input {
-    height: 44px;
-    padding: 8px 12px;
-    font-size: 0.92rem;
+    height: 46px;
+    padding: 8px 14px;
+    font-size: 0.94rem;
     width: 100%;
   }
 
   .form-divider {
-    margin: 20px 0 16px;
+    margin: 22px 0 18px;
   }
 
   .form-info-badge {
-    width: 22px;
-    height: 22px;
-    font-size: 0.76rem;
+    width: 24px;
+    height: 24px;
+    font-size: 0.78rem;
     flex-shrink: 0;
   }
 
   .form-info-text strong {
-    font-size: 0.82rem;
-  }
-
-  .form-info-text span {
-    font-size: 0.76rem;
-  }
-
-  .form-checkbox-row {
-    font-size: 0.82rem;
-    margin-bottom: 20px;
-  }
-
-  .form-buttons-row .btn {
-    font-size: 0.82rem;
-    padding: 11px 20px;
-  }
-
-  .asociate-help-top {
-    padding: 28px 18px 18px;
-  }
-
-  .asociate-help-title {
-    font-size: 1.05rem;
-  }
-
-  .asociate-help-sub {
     font-size: 0.84rem;
   }
 
+  .form-info-text span {
+    font-size: 0.78rem;
+  }
+
+  .form-checkbox-row {
+    font-size: 0.84rem;
+    margin-bottom: 22px;
+  }
+
+  .form-buttons-row .btn {
+    font-size: 0.86rem;
+    padding: 12px 22px;
+  }
+
+  .asociate-help-top {
+    padding: 28px 20px 20px;
+  }
+
+  .asociate-help-title {
+    font-size: 1.1rem;
+  }
+
+  .asociate-help-sub {
+    font-size: 0.88rem;
+  }
+
   .confirm-giant-title {
-    font-size: clamp(1.55rem, 6.4vw, 1.95rem);
-    margin: 8px 0 12px;
+    font-size: clamp(1.85rem, 7vw, 2.2rem);
+    margin: 10px 0 14px;
   }
 
   .confirm-lead {
-    font-size: clamp(0.8rem, 3.2vw, 0.92rem);
+    font-size: 0.94rem;
   }
 
   .section-confirm-banner {
-    padding: 24px 0;
+    padding: 28px 0;
   }
 
   .confirm-banner-inner {
-    gap: 16px;
+    gap: 18px;
   }
 
   .confirm-check-circle {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     border-width: 3px;
     flex-shrink: 0;
   }
 
   .confirm-check-circle svg {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
   }
 
   .confirm-banner-title {
-    font-size: clamp(1.15rem, 4.6vw, 1.35rem);
+    font-size: 1.3rem;
     margin-bottom: 6px;
   }
 
   .confirm-banner-text {
-    font-size: clamp(0.76rem, 3vw, 0.85rem);
+    font-size: 0.86rem;
+    line-height: 1.5;
   }
 
   /* Footer: Sociedad Rural on the left, links & Prototipo académico on the right */
   .site-footer {
-    padding: 22px 0;
+    padding: 30px 0;
   }
 
   .footer-inner {
@@ -2141,7 +2166,7 @@ section {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 12px;
   }
 
   .footer-left {
@@ -2151,30 +2176,30 @@ section {
   }
 
   .footer-brand-title {
-    font-size: clamp(0.66rem, 2.75vw, 0.82rem);
-    margin-bottom: 3px;
-    line-height: 1.2;
+    font-size: clamp(0.7rem, 2.9vw, 0.86rem);
+    margin-bottom: 4px;
+    line-height: 1.25;
   }
 
   .footer-brand-tagline {
-    font-size: clamp(0.58rem, 2.3vw, 0.7rem);
-    line-height: 1.3;
+    font-size: clamp(0.62rem, 2.4vw, 0.74rem);
+    line-height: 1.35;
   }
 
   .footer-right {
     text-align: right;
     flex: 0 0 auto;
-    font-size: clamp(0.58rem, 2.3vw, 0.7rem);
-    line-height: 1.3;
+    font-size: clamp(0.62rem, 2.4vw, 0.74rem);
+    line-height: 1.35;
   }
 
   .footer-links {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     white-space: nowrap;
   }
 
   .footer-meta {
-    font-size: clamp(0.54rem, 2.1vw, 0.65rem);
+    font-size: clamp(0.58rem, 2.2vw, 0.68rem);
   }
 }
 
