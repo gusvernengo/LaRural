@@ -116,7 +116,7 @@ main.page-fade-out {
 .brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .brand-logo svg {
@@ -291,10 +291,10 @@ main.page-fade-out {
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: clamp(0.75rem, 0.85vw, 0.92rem);
+  gap: 8px;
+  font-size: clamp(0.62rem, 0.72vw, 0.78rem);
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--crimson-light);
   margin-bottom: 14px;
@@ -303,7 +303,7 @@ main.page-fade-out {
 .hero-eyebrow::before {
   content: '';
   display: inline-block;
-  width: 28px;
+  width: 16px;
   height: 2px;
   background-color: var(--crimson-light);
 }
@@ -337,6 +337,18 @@ main.page-fade-out {
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.92);
   margin-bottom: 32px;
+}
+
+/* Inicio: the block is as wide as the title, and the description wraps inside that width (never wider than the title) */
+.hero-home .hero-home-content {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.hero-home .hero-desc {
+  width: 0;
+  min-width: 100%;
+  font-size: clamp(0.84rem, 0.94vw, 1rem);
 }
 
 .hero-action {
@@ -655,9 +667,11 @@ main.page-fade-out {
   align-items: center;
 }
 
-.history-seal svg {
+.history-seal svg,
+.history-seal img {
   width: clamp(240px, 21vw, 340px);
   height: clamp(240px, 21vw, 340px);
+  object-fit: contain;
 }
 
 /* Horizontal Lockup Emblem on Beneficios */
@@ -1046,6 +1060,23 @@ main.page-fade-out {
   color: rgba(255, 255, 255, 0.92);
 }
 
+.map-banner-card {
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.map-banner-card:hover,
+.map-banner-card:focus-visible {
+  box-shadow: 0 14px 32px rgba(37, 41, 28, 0.16);
+  filter: brightness(1.06);
+}
+
+.map-banner-card:focus-visible {
+  outline: 3px solid var(--lime-bright);
+  outline-offset: 3px;
+}
+
 /* =========================================
    PAGE: ASOCIATE (FORM & CONFIRMATION)
    ========================================= */
@@ -1165,7 +1196,7 @@ main.page-fade-out {
 .form-info-row {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
@@ -1201,7 +1232,7 @@ main.page-fade-out {
 .form-checkbox-row {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   font-size: clamp(0.82rem, 0.92vw, 0.98rem);
   color: var(--text-body);
   cursor: pointer;
@@ -1675,14 +1706,20 @@ section {
     width: 100%;
   }
 
-  .hero-eyebrow,
+  .hero-eyebrow {
+    font-size: 0.56rem;
+    letter-spacing: 0.03em;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
   .hero-kicker-lime {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     margin-bottom: 10px;
   }
 
   .hero-eyebrow::before {
-    width: 20px;
+    width: 12px;
   }
 
   .hero-title,
@@ -1712,6 +1749,16 @@ section {
     max-width: 100%;
   }
 
+  .hero-home .hero-home-content {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .hero-home .hero-desc {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
   .hero-play-btn {
     width: 42px;
     height: 42px;
@@ -1719,7 +1766,7 @@ section {
 
   .hero-action {
     font-size: 0.88rem;
-    gap: 12px;
+    gap: 8px;
   }
 
   /* Spacious vertical separation between sections */
@@ -2040,7 +2087,7 @@ section {
   .affiliation-actions,
   .confirm-actions {
     margin-top: 24px;
-    gap: 12px;
+    gap: 8px;
   }
 
   /* Asociate Form & Confirmation on Mobile */
@@ -2141,7 +2188,7 @@ section {
   }
 
   .confirm-check-circle svg {
-    width: 28px;
+    width: 16px;
     height: 28px;
   }
 
@@ -2166,7 +2213,7 @@ section {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
   }
 
   .footer-left {
