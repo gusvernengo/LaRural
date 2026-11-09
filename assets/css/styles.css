@@ -33,6 +33,9 @@
 html {
   scroll-behavior: smooth;
   font-synthesis: none;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -1467,6 +1470,7 @@ main.page-fade-out {
   color: var(--text-body);
 }
 
+
 /* =========================================
    FOOTER
    ========================================= */
@@ -1474,14 +1478,23 @@ main.page-fade-out {
   background-color: var(--olive-dark);
   color: var(--white);
   padding: clamp(38px, 3.6vw, 56px) 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .footer-inner {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.footer-left {
+  text-align: left;
+  min-width: 0;
 }
 
 .footer-brand-title {
@@ -1499,6 +1512,7 @@ main.page-fade-out {
 
 .footer-right {
   text-align: right;
+  flex-shrink: 0;
   font-size: clamp(0.86rem, 0.95vw, 1.02rem);
   color: rgba(255, 255, 255, 0.88);
 }
@@ -1520,16 +1534,34 @@ main.page-fade-out {
 /* =========================================
    RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================= */
+.site-header,
+main,
+section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 @media (max-width: 768px) {
   :root {
-    --side-pad: 16px;
+    --side-pad: clamp(12px, 4vw, 18px);
     --reveal-distance: 24px;
     --reveal-distance-lg: 40px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--side-pad);
+    padding-right: var(--side-pad);
   }
 
   /* Header: Logo left, only 3 lines right; Asociate inside dropdown */
   .navbar {
     height: 60px;
+    width: 100%;
   }
 
   .brand-logo svg {
@@ -1599,46 +1631,51 @@ main.page-fade-out {
     color: var(--white);
   }
 
-  /* Scale down global typography & spacing on mobile so it looks like desktop in miniature (not zoomed in) */
+  /* Scale down global typography & spacing on mobile so it fits any phone cleanly */
   .btn {
-    font-size: 0.72rem;
-    padding: 9px 18px;
+    font-size: clamp(0.68rem, 2.7vw, 0.76rem);
+    padding: 9px 16px;
     gap: 6px;
   }
 
   .section-eyebrow {
-    font-size: 0.62rem;
+    font-size: clamp(0.58rem, 2.3vw, 0.65rem);
     margin-bottom: 4px;
   }
 
   .section-heading {
-    font-size: 1.28rem;
+    font-size: clamp(1.15rem, 4.8vw, 1.35rem);
     margin-bottom: 10px;
   }
 
-  /* Heroes scaled proportionally */
+  /* Heroes centered and scaled proportionally on all phones */
   .hero-home {
-    min-height: 270px;
-    padding: 32px 0;
+    width: 100%;
+    min-height: 260px;
+    padding: 30px 0;
     background-position: 62% center;
+    background-size: cover;
   }
 
   .hero-institucion,
   .hero-beneficios,
   .hero-encuentro,
   .hero-asociate {
+    width: 100%;
     min-height: 210px;
     padding: 28px 0;
+    background-size: cover;
   }
 
   .hero-home-content,
   .hero-institucion-content {
-    max-width: 66%;
+    max-width: 100%;
+    width: 100%;
   }
 
   .hero-eyebrow,
   .hero-kicker-lime {
-    font-size: 0.6rem;
+    font-size: clamp(0.58rem, 2.3vw, 0.65rem);
     margin-bottom: 6px;
   }
 
@@ -1651,13 +1688,13 @@ main.page-fade-out {
   .hero-beneficios .hero-title,
   .hero-encuentro .hero-title,
   .hero-asociate .hero-title {
-    font-size: 1.5rem;
+    font-size: clamp(1.38rem, 5.8vw, 1.65rem);
     margin-bottom: 10px;
   }
 
   .hero-subtitle,
   .hero-lead-white {
-    font-size: 0.82rem;
+    font-size: clamp(0.76rem, 3.1vw, 0.88rem);
     margin-bottom: 6px;
   }
 
@@ -1666,9 +1703,10 @@ main.page-fade-out {
   .hero-beneficios .hero-desc,
   .hero-encuentro .hero-desc,
   .hero-asociate .hero-desc {
-    font-size: 0.72rem;
+    font-size: clamp(0.7rem, 2.8vw, 0.78rem);
     line-height: 1.45;
     margin-bottom: 14px;
+    max-width: 92%;
   }
 
   .hero-play-btn {
@@ -1677,7 +1715,7 @@ main.page-fade-out {
   }
 
   .hero-action {
-    font-size: 0.75rem;
+    font-size: clamp(0.72rem, 2.8vw, 0.8rem);
     gap: 10px;
   }
 
@@ -1704,60 +1742,70 @@ main.page-fade-out {
     padding: 12px 0 28px;
   }
 
-  /* Keep 3-column sections side-by-side in 3 compact columns like desktop */
+  /* Keep 3-column sections side-by-side in 3 equal, fluid columns that never overflow any phone width */
   .pillars-grid,
   .role-cards-grid,
   .encuentro-cols,
   .confirm-next-cards {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(6px, 2vw, 10px);
+    width: 100%;
   }
 
   .pillar-card,
   .role-card,
-  .confirm-step-card {
-    padding: 14px 10px;
+  .confirm-step-card,
+  .encuentro-col {
+    min-width: 0;
+    padding: clamp(10px, 2.8vw, 14px) clamp(7px, 2vw, 10px);
     border-radius: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .pillar-badge {
-    width: 26px;
-    height: 26px;
-    font-size: 0.72rem;
-    margin-bottom: 8px;
+    width: clamp(22px, 6vw, 26px);
+    height: clamp(22px, 6vw, 26px);
+    font-size: clamp(0.64rem, 2.5vw, 0.72rem);
+    margin-bottom: 7px;
   }
 
   .role-number {
-    font-size: 0.7rem;
+    font-size: clamp(0.64rem, 2.5vw, 0.72rem);
     margin-bottom: 4px;
   }
 
   .pillar-title,
   .role-card-title,
   .encuentro-col-title {
-    font-size: 0.8rem;
-    line-height: 1.25;
+    font-size: clamp(0.65rem, 2.6vw, 0.8rem);
+    line-height: 1.22;
     margin-bottom: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .pillar-text,
   .role-card-text,
   .encuentro-col-text {
-    font-size: 0.68rem;
-    line-height: 1.4;
+    font-size: clamp(0.57rem, 2.22vw, 0.68rem);
+    line-height: 1.35;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   /* Keep 2-column text/seal sections side-by-side, but give photo sections full width so photos look large */
   .history-grid,
   .confirm-hero-grid {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 16px;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 12px;
+    align-items: center;
   }
 
   .voice-grid,
   .topics-grid,
   .agenda-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 18px;
   }
 
@@ -1780,7 +1828,7 @@ main.page-fade-out {
   .history-text p,
   .role-intro p,
   .benefits-intro p {
-    font-size: 0.74rem;
+    font-size: clamp(0.7rem, 2.8vw, 0.78rem);
     line-height: 1.5;
     margin-bottom: 12px;
   }
@@ -1791,76 +1839,82 @@ main.page-fade-out {
   }
 
   .history-seal svg {
-    width: 135px;
-    height: 135px;
+    width: clamp(105px, 28vw, 135px);
+    height: clamp(105px, 28vw, 135px);
   }
 
   .horizontal-emblem {
-    gap: 10px;
+    gap: 8px;
   }
 
   .horizontal-emblem svg {
-    width: 68px;
-    height: 68px;
+    width: clamp(48px, 14vw, 68px);
+    height: clamp(48px, 14vw, 68px);
   }
 
   .horizontal-emblem-text {
-    font-size: 0.95rem;
+    font-size: clamp(0.75rem, 3vw, 0.95rem);
   }
 
   /* ACCIONES PARA LOS PRODUCTORES: 2x2 Square Grid ("dos y dos, como en un cuadrado") */
   .actions-table {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(8px, 2.5vw, 12px);
     margin-top: 16px;
     border-top: none;
+    width: 100%;
   }
 
   .action-row {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 14px 12px;
+    padding: clamp(11px, 3vw, 14px) clamp(9px, 2.5vw, 12px);
     background-color: rgba(255, 255, 255, 0.55);
     border-radius: 10px;
     border-bottom: none;
+    overflow-wrap: break-word;
   }
 
   .action-num {
-    font-size: 0.72rem;
+    font-size: clamp(0.66rem, 2.6vw, 0.72rem);
   }
 
   .action-name {
-    font-size: 0.84rem;
+    font-size: clamp(0.74rem, 3vw, 0.84rem);
     line-height: 1.25;
   }
 
   .action-desc {
-    font-size: 0.7rem;
-    line-height: 1.42;
+    font-size: clamp(0.62rem, 2.45vw, 0.7rem);
+    line-height: 1.4;
   }
 
   /* BENEFICIOS PARA SEGUIR CRECIENDO: 2x2 Square Grid */
   .benefits-cards-2x2 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(8px, 2.5vw, 12px);
+    width: 100%;
   }
 
   .benefit-media-card {
-    grid-template-columns: 1fr;
-    padding: 12px;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+    padding: clamp(10px, 2.8vw, 12px);
     gap: 10px;
     border-radius: 10px;
+    overflow-wrap: break-word;
   }
 
   .benefit-media-title {
-    font-size: 0.84rem;
+    font-size: clamp(0.74rem, 3vw, 0.84rem);
     margin-bottom: 4px;
   }
 
   .benefit-media-desc {
-    font-size: 0.68rem;
+    font-size: clamp(0.62rem, 2.45vw, 0.68rem);
     line-height: 1.4;
   }
 
@@ -1876,108 +1930,113 @@ main.page-fade-out {
 
   .topic-title,
   .agenda-item-title {
-    font-size: 0.92rem;
+    font-size: clamp(0.84rem, 3.4vw, 0.94rem);
     margin-bottom: 3px;
   }
 
   .topic-desc,
   .agenda-item-desc {
-    font-size: 0.78rem;
+    font-size: clamp(0.72rem, 2.9vw, 0.8rem);
     line-height: 1.45;
   }
 
   .agenda-item {
-    gap: 14px;
+    gap: 12px;
     padding: 10px 12px;
   }
 
   .agenda-icon-circle {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
   }
 
   .agenda-icon-circle svg {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   /* Event Info Strip in 3 columns */
   .event-strip-box {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 14px 12px;
-    gap: 8px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 12px 10px;
+    gap: 6px;
+    width: 100%;
   }
 
   .event-strip-item {
-    gap: 8px;
+    min-width: 0;
+    gap: 6px;
   }
 
   .event-strip-icon svg {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
   }
 
   .event-strip-text {
-    font-size: 0.68rem;
+    font-size: clamp(0.58rem, 2.3vw, 0.68rem);
+    overflow-wrap: break-word;
   }
 
   /* CTA Banner & Map Banner */
   .cta-banner-box {
-    padding: 20px 18px;
-    gap: 14px;
+    padding: 18px 16px;
+    gap: 12px;
     align-items: center;
   }
 
   .cta-banner-box--compact {
-    padding: 16px 18px;
+    padding: 16px;
   }
 
   .cta-banner-title,
   .cta-banner-box--compact .cta-banner-title {
-    font-size: 0.98rem;
+    font-size: clamp(0.86rem, 3.5vw, 0.98rem);
     margin-bottom: 4px;
   }
 
   .cta-banner-sub {
-    font-size: 0.72rem;
+    font-size: clamp(0.66rem, 2.6vw, 0.74rem);
   }
 
   .map-banner-card {
-    min-height: 96px;
-    padding: 16px 18px;
+    min-height: 92px;
+    padding: 16px;
   }
 
   .map-pin-large svg {
-    width: 28px;
-    height: 34px;
+    width: 26px;
+    height: 32px;
   }
 
   .map-banner-title {
-    font-size: 0.92rem;
+    font-size: clamp(0.84rem, 3.4vw, 0.92rem);
   }
 
   .map-banner-sub {
-    font-size: 0.72rem;
+    font-size: clamp(0.66rem, 2.6vw, 0.72rem);
   }
 
   /* Asociate Form & Confirmation on Mobile — larger and closer so it's comfortable to read and fill */
   .asociate-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 20px;
   }
 
   .asociate-form-card {
-    padding: 26px 20px;
+    padding: 24px 18px;
     border-radius: 14px;
   }
 
   .asociate-form-title {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     margin-bottom: 18px;
   }
 
   .form-grid-2col {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 14px;
   }
 
@@ -1989,6 +2048,7 @@ main.page-fade-out {
     height: 44px;
     padding: 8px 12px;
     font-size: 0.92rem;
+    width: 100%;
   }
 
   .form-divider {
@@ -1999,6 +2059,7 @@ main.page-fade-out {
     width: 22px;
     height: 22px;
     font-size: 0.76rem;
+    flex-shrink: 0;
   }
 
   .form-info-text strong {
@@ -2015,8 +2076,8 @@ main.page-fade-out {
   }
 
   .form-buttons-row .btn {
-    font-size: 0.84rem;
-    padding: 11px 22px;
+    font-size: 0.82rem;
+    padding: 11px 20px;
   }
 
   .asociate-help-top {
@@ -2032,58 +2093,88 @@ main.page-fade-out {
   }
 
   .confirm-giant-title {
-    font-size: 1.95rem;
+    font-size: clamp(1.55rem, 6.4vw, 1.95rem);
     margin: 8px 0 12px;
   }
 
   .confirm-lead {
-    font-size: 0.92rem;
+    font-size: clamp(0.8rem, 3.2vw, 0.92rem);
   }
 
   .section-confirm-banner {
-    padding: 28px 0;
+    padding: 24px 0;
   }
 
   .confirm-banner-inner {
-    gap: 20px;
+    gap: 16px;
   }
 
   .confirm-check-circle {
-    width: 58px;
-    height: 58px;
+    width: 52px;
+    height: 52px;
     border-width: 3px;
+    flex-shrink: 0;
   }
 
   .confirm-check-circle svg {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 
   .confirm-banner-title {
-    font-size: 1.35rem;
+    font-size: clamp(1.15rem, 4.6vw, 1.35rem);
     margin-bottom: 6px;
   }
 
   .confirm-banner-text {
-    font-size: 0.85rem;
+    font-size: clamp(0.76rem, 3vw, 0.85rem);
   }
 
-  /* Footer */
+  /* Footer: Sociedad Rural on the left, links & Prototipo académico on the right */
   .site-footer {
-    padding: 24px 0;
+    padding: 22px 0;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .footer-left {
+    text-align: left;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .footer-brand-title {
-    font-size: 0.82rem;
+    font-size: clamp(0.66rem, 2.75vw, 0.82rem);
+    margin-bottom: 3px;
+    line-height: 1.2;
   }
 
-  .footer-brand-tagline,
+  .footer-brand-tagline {
+    font-size: clamp(0.58rem, 2.3vw, 0.7rem);
+    line-height: 1.3;
+  }
+
   .footer-right {
-    font-size: 0.7rem;
+    text-align: right;
+    flex: 0 0 auto;
+    font-size: clamp(0.58rem, 2.3vw, 0.7rem);
+    line-height: 1.3;
+  }
+
+  .footer-links {
+    margin-bottom: 3px;
+    white-space: nowrap;
   }
 
   .footer-meta {
-    font-size: 0.65rem;
+    font-size: clamp(0.54rem, 2.1vw, 0.65rem);
   }
 }
 
@@ -2163,4 +2254,3 @@ footer[id] {
     transition: none !important;
   }
 }
-
