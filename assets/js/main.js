@@ -9,6 +9,11 @@ const PAGE_VIEWS = {
     "beneficios.html":  "\u003c!-- HERO BENEFICIOS --\u003e\r\n    \u003csection class=\"hero-beneficios\"\u003e\r\n      \u003cdiv class=\"container\"\u003e\r\n        \u003cdiv class=\"hero-institucion-content\"\u003e\r\n          \u003cspan class=\"hero-kicker-lime\"\u003eSociedad Rural de Goya\u003c/span\u003e\r\n          \u003ch1 class=\"hero-title\"\u003e\r\n            Estamos cerca\u003cbr /\u003e\r\n            del productor\r\n          \u003c/h1\u003e\r\n          \u003cp class=\"hero-desc\"\u003e\r\n            Conocé nuestras acciones gremiales y la propuesta de beneficios para asociados.\r\n          \u003c/p\u003e\r\n        \u003c/div\u003e\r\n      \u003c/div\u003e\r\n    \u003c/section\u003e\r\n\r\n    \u003c!-- NUESTRO LABOR / UNA VOZ PARA EL SECTOR --\u003e\r\n    \u003csection class=\"section-history\" id=\"nuestro-labor\"\u003e\r\n      \u003cdiv class=\"container\"\u003e\r\n        \u003cdiv class=\"history-grid\"\u003e\r\n          \u003cdiv class=\"history-text\"\u003e\r\n            \u003cspan class=\"section-eyebrow\" data-reveal=\"up\"\u003eNuestra labor\u003c/span\u003e\r\n            \u003ch2 class=\"section-heading\" data-reveal=\"up\"\u003eUna voz para el sector\u003c/h2\u003e\r\n            \u003cp data-reveal=\"up\" data-reveal-delay=\"100\"\u003e\r\n              Representamos inquietudes del sector y promovemos el diálogo sobre temas\r\n              que forman parte de la vida y la actividad rural.\r\n            \u003c/p\u003e\r\n          \u003c/div\u003e\r\n\r\n          \u003cdiv class=\"history-seal\" data-reveal=\"up-large\" data-reveal-delay=\"200\"\u003e\r\n            \u003cdiv class=\"horizontal-emblem\"\u003e\r\n              \u003csvg viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Emblema Sociedad Rural Goya\"\u003e\r\n                \u003cpath d=\"M 8 46.5 A 42 42 0 0 1 46.5 8 L 46.5 26 A 24 24 0 0 0 26 46.5 Z\" fill=\"#991b1e\" /\u003e\r\n                \u003cpath d=\"M 53.5 8 A 42 42 0 0 1 92 46.5 L 74 46.5 A 24 24 0 0 0 53.5 26 Z\" fill=\"#991b1e\" /\u003e\r\n                \u003cg fill=\"#5c4320\"\u003e\r\n                  \u003cpath d=\"M 26.2 52.5 L 8.2 52.5 A 42 42 0 0 0 10.6 64.9 L 27.4 57.4 Z\" /\u003e\r\n                  \u003cpath d=\"M 28.6 60.5 L 12.4 68.7 A 42 42 0 0 0 18.8 79.1 L 32.3 65.5 Z\" /\u003e\r\n                  \u003cpath d=\"M 34.4 67.8 L 21.8 81.8 A 42 42 0 0 0 31.6 88.6 L 39.2 71.2 Z\" /\u003e\r\n                  \u003cpath d=\"M 42.3 72.7 L 35.5 90.2 A 42 42 0 0 0 47.6 92.0 L 47.6 74.0 Z\" /\u003e\r\n                  \u003cpath d=\"M 52.4 74.0 L 52.4 92.0 A 42 42 0 0 0 64.5 90.2 L 57.7 72.7 Z\" /\u003e\r\n                  \u003cpath d=\"M 60.8 71.2 L 68.4 88.6 A 42 42 0 0 0 78.2 81.8 L 65.6 67.8 Z\" /\u003e\r\n                  \u003cpath d=\"M 67.7 65.5 L 81.2 79.1 A 42 42 0 0 0 87.6 68.7 L 71.4 60.5 Z\" /\u003e\r\n                  \u003cpath d=\"M 72.6 57.4 L 89.4 64.9 A 42 42 0 0 0 91.8 52.5 L 73.8 52.5 Z\" /\u003e\r\n                \u003c/g\u003e\r\n                \u003ccircle cx=\"50\" cy=\"50\" r=\"18.5\" fill=\"#465425\" /\u003e\r\n              \u003c/svg\u003e\r\n              \u003cdiv class=\"horizontal-emblem-text\"\u003e\r\n                \u003cdiv\u003eSociedad\u003c/div\u003e\r\n                \u003cdiv\u003eRural Goya\u003c/div\u003e\r\n              \u003c/div\u003e\r\n            \u003c/div\u003e\r\n          \u003c/div\u003e\r\n        \u003c/div\u003e\r\n      \u003c/div\u003e\r\n    \u003c/section\u003e\r\n\r\n    \u003c!-- ACCIONES PARA LOS PRODUCTORES --\u003e\r\n    \u003csection class=\"section-actions-list\" id=\"acciones\"\u003e\r\n      \u003cdiv class=\"container\"\u003e\r\n        \u003ch2 class=\"section-heading\" data-reveal=\"up\"\u003eAcciones para los productores\u003c/h2\u003e\r\n\r\n        \u003cdiv class=\"actions-table\" data-stagger=\"100\"\u003e\r\n          \u003cdiv class=\"action-row\" data-reveal=\"up\"\u003e\r\n            \u003cspan class=\"action-num\"\u003e01\u003c/span\u003e\r\n            \u003ch3 class=\"action-name\"\u003eRepresentación gremial\u003c/h3\u003e\r\n            \u003cp class=\"action-desc\"\u003e\r\n              Acercamos las inquietudes del sector a organismos e instituciones correspondientes.\r\n            \u003c/p\u003e\r\n          \u003c/div\u003e\r\n\r\n          \u003cdiv class=\"action-row\" data-reveal=\"up\"\u003e\r\n            \u003cspan class=\"action-num\"\u003e02\u003c/span\u003e\r\n            \u003ch3 class=\"action-name\"\u003eCaminos e infraestructura\u003c/h3\u003e\r\n            \u003cp class=\"action-desc\"\u003e\r\n              Promovemos el diálogo sobre caminos rurales y condiciones para la actividad productiva.\r\n            \u003c/p\u003e\r\n          \u003c/div\u003e\r\n\r\n          \u003cdiv class=\"action-row\" data-reveal=\"up\"\u003e\r\n            \u003cspan class=\"action-num\"\u003e03\u003c/span\u003e\r\n            \u003ch3 class=\"action-name\"\u003eEnergía y conectividad\u003c/h3\u003e\r\n            \u003cp class=\"action-desc\"\u003e\r\n              Comunicamos necesidades de acceso a electricidad y servicios de comunicación en zonas rurales.\r\n            \u003c/p\u003e\r\n          \u003c/div\u003e\r\n\r\n          \u003cdiv class=\"action-row\" data-reveal=\"up\"\u003e\r\n            \u003cspan class=\"action-num\"\u003e04\u003c/span\u003e\r\n            \u003ch3 class=\"action-name\"\u003eInformación y encuentro\u003c/h3\u003e\r\n            \u003cp class=\"action-desc\"\u003e\r\n              Compartimos novedades y promovemos el intercambio de experiencias y propuestas.\r\n            \u003c/p\u003e\r\n          \u003c/div\u003e\r\n        \u003c/div\u003e\r\n      \u003c/div\u003e\r\n    \u003c/section\u003e\r\n\r\n    \u003c!-- PARA ASOCIADOS / BENEFICIOS PARA SEGUIR CRECIENDO --\u003e\r\n    \u003csection class=\"section-benefits-grid\" id=\"para-asociados\"\u003e\r\n      \u003cdiv class=\"container\"\u003e\r\n        \u003cdiv class=\"benefits-intro\"\u003e\r\n          \u003cspan class=\"section-eyebrow\" data-reveal=\"up\"\u003ePara asociados\u003c/span\u003e\r\n          \u003ch2 class=\"section-heading\" data-reveal=\"up\"\u003eBeneficios para seguir creciendo\u003c/h2\u003e\r\n          \u003cp data-reveal=\"up\" data-reveal-delay=\"100\"\u003e\r\n            Una propuesta para acompañar a los productores y fortalecer su participación en la institución.\r\n          \u003c/p\u003e\r\n          \u003cp class=\"benefits-note\" data-reveal=\"up\" data-reveal-delay=\"150\"\u003ePropuesta sujeta a confirmación institucional.\u003c/p\u003e\r\n        \u003c/div\u003e\r\n\r\n        \u003cdiv class=\"benefits-cards-2x2\" data-stagger=\"100\"\u003e\r\n          \u003carticle class=\"benefit-media-card\" data-reveal=\"up\"\u003e\r\n            \u003cdiv\u003e\r\n              \u003ch3 class=\"benefit-media-title\"\u003eAsesoramiento\u003c/h3\u003e\r\n              \u003cp class=\"benefit-media-desc\"\u003e\r\n                Orientación sobre consultas vinculadas con la actividad y gestiones institucionales.\r\n              \u003c/p\u003e\r\n            \u003c/div\u003e\r\n            \u003cdiv class=\"benefit-media-img\"\u003e\r\n              \u003cimg src=\"assets/img/a1.jpeg\" alt=\"Asesoramiento al productor rural\" loading=\"lazy\" /\u003e\r\n            \u003c/div\u003e\r\n          \u003c/article\u003e\r\n\r\n          \u003carticle class=\"benefit-media-card\" data-reveal=\"up\"\u003e\r\n            \u003cdiv\u003e\r\n              \u003ch3 class=\"benefit-media-title\"\u003eCapacitaciones\u003c/h3\u003e\r\n              \u003cp class=\"benefit-media-desc\"\u003e\r\n                Charlas para informarse y compartir experiencias.\r\n              \u003c/p\u003e\r\n            \u003c/div\u003e\r\n            \u003cdiv class=\"benefit-media-img\"\u003e\r\n              \u003cimg src=\"assets/img/a3.webp\" alt=\"Capacitaciones y charlas rurales\" loading=\"lazy\" /\u003e\r\n            \u003c/div\u003e\r\n          \u003c/article\u003e\r\n\r\n          \u003carticle class=\"benefit-media-card\" data-reveal=\"up\"\u003e\r\n            \u003cdiv\u003e\r\n              \u003ch3 class=\"benefit-media-title\"\u003eConvenios comerciales\u003c/h3\u003e\r\n              \u003cp class=\"benefit-media-desc\"\u003e\r\n                Posibles acuerdos con comercios del sector, sujetos a confirmación.\r\n              \u003c/p\u003e\r\n            \u003c/div\u003e\r\n            \u003cdiv class=\"benefit-media-img\"\u003e\r\n              \u003cimg src=\"assets/img/a2.webp\" alt=\"Convenios comerciales para socios\" loading=\"lazy\" /\u003e\r\n            \u003c/div\u003e\r\n          \u003c/article\u003e\r\n\r\n          \u003carticle class=\"benefit-media-card\" data-reveal=\"up\"\u003e\r\n            \u003cdiv\u003e\r\n              \u003ch3 class=\"benefit-media-title\"\u003eDescuentos\u003c/h3\u003e\r\n              \u003cp class=\"benefit-media-desc\"\u003e\r\n                Accedé a descuentos especiales en comercios y eventos vinculados al sector agropecuario.\r\n              \u003c/p\u003e\r\n            \u003c/div\u003e\r\n            \u003cdiv class=\"benefit-media-img\"\u003e\r\n              \u003cimg src=\"assets/img/a7.webp\" alt=\"Descuentos y beneficios para asociados\" loading=\"lazy\" /\u003e\r\n            \u003c/div\u003e\r\n          \u003c/article\u003e\r\n        \u003c/div\u003e\r\n      \u003c/div\u003e\r\n    \u003c/section\u003e\r\n\r\n    \u003c!-- ¿CÓMO SOLICITAR LA AFILIACIÓN? --\u003e\r\n    \u003csection class=\"section-affiliation\" id=\"afiliacion\"\u003e\r\n      \u003cdiv class=\"container\"\u003e\r\n        \u003ch2 class=\"section-heading\" data-reveal=\"up\"\u003e¿Cómo solicitar la afiliación?\u003c/h2\u003e\r\n\r\n        \u003cdiv class=\"pillars-grid\" data-stagger=\"100\"\u003e\r\n          \u003carticle class=\"pillar-card pillar-card--light\" data-reveal=\"up\"\u003e\r\n            \u003cspan class=\"pillar-badge\"\u003e1\u003c/span\u003e\r\n            \u003ch3 class=\"pillar-title\"\u003eConsultá\u003c/h3\u003e\r\n            \u003cp class=\"pillar-text\"\u003eConocé los requisitos y la cuota.\u003c/p\u003e\r\n          \u003c/article\u003e\r\n\r\n          \u003carticle class=\"pillar-card pillar-card--light\" data-reveal=\"up\"\u003e\r\n            \u003cspan class=\"pillar-badge\"\u003e2\u003c/span\u003e\r\n            \u003ch3 class=\"pillar-title\"\u003eCompletá\u003c/h3\u003e\r\n            \u003cp class=\"pillar-text\"\u003eIngresá tus datos en la solicitud.\u003c/p\u003e\r\n          \u003c/article\u003e\r\n\r\n          \u003carticle class=\"pillar-card pillar-card--light\" data-reveal=\"up\"\u003e\r\n            \u003cspan class=\"pillar-badge\"\u003e3\u003c/span\u003e\r\n            \u003ch3 class=\"pillar-title\"\u003eContinuá\u003c/h3\u003e\r\n            \u003cp class=\"pillar-text\"\u003eLa institución te informará los pasos siguientes.\u003c/p\u003e\r\n          \u003c/article\u003e\r\n        \u003c/div\u003e\r\n\r\n        \u003cdiv class=\"affiliation-actions\" data-reveal=\"up\" data-reveal-delay=\"300\"\u003e\r\n          \u003ca href=\"asociate.html\" class=\"btn btn-olive\"\u003eQuiero asociarme\u003c/a\u003e\r\n          \u003ca href=\"#contacto\" class=\"btn btn-outline\"\u003eHacer una consulta\u003c/a\u003e\r\n        \u003c/div\u003e\r\n      \u003c/div\u003e\r\n    \u003c/section\u003e"
 };
 
+PAGE_VIEWS["encuentro.html"] = PAGE_VIEWS["encuentro.html"]
+  .replaceAll('assets/img/encuentro-agenda.jpg', 'assets/img/a11.jpg')
+  .replaceAll('assets/img/encuentro-intercambio.jpg', 'assets/img/a12.jpg')
+  .replaceAll('assets/img/encuentro-afiliacion.jpg', 'assets/img/a13.jpg');
+
 const PAGE_TITLES = {
   'index.html': 'Sociedad Rural de Goya — Inicio',
   'institucion.html': 'Sociedad Rural de Goya — Institución',
@@ -262,7 +267,6 @@ function initPageInteractions() {
   const formView = document.getElementById('formView');
   const confirmView = document.getElementById('confirmView');
   const formErrorMsg = document.getElementById('formErrorMsg');
-  const navLinksContainer = document.querySelector('.nav-links');
 
   const requiredIds = ['nombre', 'localidad', 'telefono'];
 
@@ -288,9 +292,6 @@ function initPageInteractions() {
     if (!formView || !confirmView) return;
     formView.hidden = true;
     confirmView.hidden = false;
-    if (navLinksContainer) {
-      navLinksContainer.style.visibility = 'hidden';
-    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
     initScrollAnimations();
   }
@@ -388,14 +389,32 @@ function navigateToPage(targetHref, pushHistory = true) {
   return true;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   const menuBtn = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   if (menuBtn && navLinks) {
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
       const isOpen = navLinks.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close menu when clicking any navigation link
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
@@ -435,4 +454,10 @@ document.addEventListener('DOMContentLoaded', () => {
       navigateToPage(target, false);
     }
   });
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}

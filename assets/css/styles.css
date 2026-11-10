@@ -1,4 +1,5 @@
 :root {
+  --header-height: clamp(65px, 4.8vw, 78px);
   --olive-dark: #465425;
   --olive-darker: #36421b;
   --lime-accent: #98b222;
@@ -61,6 +62,7 @@ a {
 }
 
 main {
+  padding-top: var(--header-height);
   transition: opacity 0.18s cubic-bezier(0.4, 0, 0.2, 1), transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
@@ -97,19 +99,24 @@ main.page-fade-out {
    HEADER / NAVBAR
    ========================================= */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(70, 84, 37, 0.08);
+  overflow: visible;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: clamp(72px, 5.4vw, 88px);
+  height: var(--header-height);
   gap: 24px;
 }
 
@@ -572,7 +579,8 @@ main.page-fade-out {
       rgba(34, 40, 24, 0.08) 80%,
       rgba(34, 40, 24, 0) 100%
     ),
-    url('../img/hero-institucion.jpg');
+    url('../img/a14.jpg');
+  background-position: center 45%;
 }
 
 .hero-beneficios {
@@ -584,7 +592,7 @@ main.page-fade-out {
       rgba(28, 33, 19, 0.14) 82%,
       rgba(28, 33, 19, 0.02) 100%
     ),
-    url('../img/hero-beneficios.jpg');
+    url('../img/a9.jpeg');
   background-position: center center;
 }
 
@@ -598,7 +606,7 @@ main.page-fade-out {
       rgba(28, 34, 18, 0.08) 78%,
       rgba(28, 34, 18, 0) 100%
     ),
-    url('../img/hero-encuentro.jpg');
+    url('../img/a10.jpeg');
   background-position: 80% center;
 }
 
@@ -627,6 +635,14 @@ main.page-fade-out {
   font-size: clamp(2.4rem, 4.5vw, 4.2rem);
   line-height: 1.04;
   margin-bottom: 18px;
+}
+
+.mobile-title-break {
+  display: none;
+}
+
+.mobile-encuentro-title {
+  display: none;
 }
 
 .hero-lead-white {
@@ -1461,6 +1477,10 @@ main.page-fade-out {
   transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.agenda-photo-card img[src$="a11.jpg"] {
+  transform: scale(1.03);
+}
+
 .topics-image-frame img.img-switching,
 .agenda-photo-card img.img-switching,
 .voice-image-wrap img.img-switching {
@@ -1588,7 +1608,6 @@ main.page-fade-out {
 /* =========================================
    RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================= */
-.site-header,
 main,
 section {
   width: 100%;
@@ -1598,7 +1617,7 @@ section {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 58px;
+    --header-height: 56px;
     --side-pad: clamp(18px, 5vw, 24px);
     --reveal-distance: 28px;
     --reveal-distance-lg: 45px;
@@ -1630,8 +1649,24 @@ section {
 
   .mobile-menu-toggle {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
-    padding: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-dark);
+    position: relative;
+    z-index: 1002;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .mobile-menu-toggle svg {
+    pointer-events: none;
   }
 
   .btn-nav-cta {
@@ -1639,21 +1674,23 @@ section {
   }
 
   .nav-links {
-    position: fixed;
-    top: var(--header-height);
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
+    width: 100%;
     background-color: var(--white);
     flex-direction: column;
     gap: 0;
     padding: 14px 22px 20px;
     border-bottom: 1px solid rgba(70, 84, 37, 0.12);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     display: none;
+    z-index: 1001;
   }
 
   .nav-links.open {
-    display: flex;
+    display: flex !important;
   }
 
   .nav-links li {
@@ -1730,6 +1767,23 @@ section {
     width: 100%;
   }
 
+  .hero-encuentro .hero-institucion-content {
+    width: min(100%, 72vw);
+  }
+
+  .hero-encuentro .hero-lead-white,
+  .hero-encuentro .hero-desc {
+    max-width: 100%;
+  }
+
+  .hero-encuentro .desktop-encuentro-title {
+    display: none;
+  }
+
+  .hero-encuentro .mobile-encuentro-title {
+    display: inline;
+  }
+
   .hero-eyebrow {
     font-size: 0.56rem;
     letter-spacing: 0.03em;
@@ -1773,6 +1827,20 @@ section {
     max-width: 100%;
   }
 
+  .hero-institucion .hero-title {
+    font-size: clamp(1.5rem, 5.5vw, 1.8rem);
+  }
+
+  .mobile-title-break {
+    display: initial;
+  }
+
+  .hero-institucion .hero-desc {
+    max-width: min(100%, 28rem);
+    font-size: 0.84rem;
+    margin-bottom: 0;
+  }
+
   .hero-home .hero-home-content {
     width: fit-content;
     max-width: 100%;
@@ -1808,6 +1876,14 @@ section {
   .section-confirm-hero,
   .section-confirm-next {
     padding: 44px 0;
+  }
+
+  .section-benefits-grid {
+    padding-bottom: 0;
+  }
+
+  .section-affiliation {
+    padding-top: 24px;
   }
 
   .section-cta-banner,
